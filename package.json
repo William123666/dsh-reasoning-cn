@@ -1,0 +1,85 @@
+{
+  "name": "dsh-reasoning-cn",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin that steers reasoning toward Simplified Chinese and translates eligible reasoning blocks.",
+  "type": "module",
+  "license": "MIT",
+  "author": "William Yuan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/William123666/dsh-reasoning-cn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/William123666/dsh-reasoning-cn/issues"
+  },
+  "homepage": "https://github.com/William123666/dsh-reasoning-cn#readme",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "plugin",
+    "reasoning",
+    "chinese",
+    "dsh-plugin"
+  ],
+  "packageManager": "npm@11.11.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib",
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.test.json",
+    "smoke": "node scripts/smoke.mjs",
+    "verify": "npm run typecheck && npm test && npm run build && npm run smoke && npm run package:check",
+    "verify:real": "node scripts/verify-real.mjs",
+    "package:check": "node scripts/verify-package.mjs",
+    "prepack": "npm run clean && npm run build",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build && npm run smoke"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.1 <5.0.0",
+    "@deepseek-ai/dsh-agent": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-llm": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-system-prompt": "0.1.0-rc.7"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.1",
+    "@deepseek-ai/dsh-agent": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-llm": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-llm-pi-ai": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-system-prompt": "0.1.0-rc.7",
+    "@types/node": "^22.19.0",
+    "typescript": "~5.9.0",
+    "vitest": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}

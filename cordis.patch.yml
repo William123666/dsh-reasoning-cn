@@ -1,0 +1,5 @@
+# The bundle layer applied when `dsh plugin add dsh-reasoning-cn` installs
+# this package into a profile.
+- insert:
+    - id: reasoning-cn
+      name: 'dsh-reasoning-cn'

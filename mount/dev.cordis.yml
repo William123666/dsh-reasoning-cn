@@ -1,0 +1,9 @@
+# Dev overlay template for running against a source checkout of DeepSeek Harness.
+# Replace the placeholder with this checkout's absolute path before use.
+- insert:
+    - id: reasoning-cn
+      name: 'file:///ABSOLUTE_PATH_TO_DSH_REASONING_CN/lib/index.js'
+      config:
+        steering: both
+        translate: false
+        verbose: true
