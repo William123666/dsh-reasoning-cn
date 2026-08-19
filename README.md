@@ -132,6 +132,11 @@ npm run verify:real
 
 GitHub 仓库建议添加 [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic，便于 Harness 社区发现。
 
+## 发布
+
+维护者发布流程、版本规则和 npm Trusted Publishing 前置条件见
+[RELEASING.md](./RELEASING.md)。
+
 ## License
 
 MIT，见 [LICENSE](./LICENSE)。

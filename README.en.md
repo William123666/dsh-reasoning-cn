@@ -86,6 +86,11 @@ Keep the actual credential only in the shell environment. The check disables ste
 
 Add the [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic to the GitHub repository for DeepSeek Harness community discovery.
 
+## Releases
+
+See [RELEASING.md](./RELEASING.md) for maintainer release policy, versioning,
+and npm Trusted Publishing prerequisites.
+
 ## License
 
 MIT, see [LICENSE](./LICENSE).
