@@ -66,9 +66,18 @@ npm whoami
 ```
 
 Do not commit credentials, tokens, or `.npmrc`. Before the first tag-triggered
-publish, configure npm Trusted Publishing for this repository and the
-`release.yml` workflow. The GitHub workflow uses OIDC and intentionally does
-not consume an npm token.
+publish, configure npm Trusted Publishing with these values:
+
+- Provider: GitHub Actions
+- Organization or user: `William123666`
+- Repository: `dsh-reasoning-cn`
+- Workflow filename: `release.yml`
+- Environment: `npm`
+- Allowed action: `npm publish`
+
+The GitHub workflow uses OIDC and intentionally does not consume an npm token.
+It installs the pinned npm `11.11.0` release because trusted publishing
+requires npm `11.5.1` or newer; Node.js `22.19.0` bundles an older npm client.
 
 ## Corrections, rollback, and security fixes
 
