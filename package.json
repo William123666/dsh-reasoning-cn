@@ -77,7 +77,7 @@
     "@deepseek-ai/dsh-system-prompt": "0.1.0-rc.7",
     "@types/node": "^22.19.0",
     "typescript": "~5.9.0",
-    "vitest": "^3.2.0"
+    "vitest": "^5.0.0"
   },
   "engines": {
     "node": ">=22.19.0"
